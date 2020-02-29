@@ -202,9 +202,7 @@ def main():
 
     return common_cli.StartCli(
         args,
-        adb_commands.AdbCommands,
-        auth_timeout_ms=int(args.auth_timeout_s * 1000),
-        rsa_keys=[rsa_signer(path) for path in args.rsa_key_path])
+        adb_commands.AdbCommands)
 
 
 if __name__ == '__main__':
